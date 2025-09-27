@@ -1,0 +1,206 @@
+TASK-1
+class Student {
+ String name;
+ int rollno;
+ double marks;
+ void display(){
+     System.out.println("Name :"+name);
+     System.out.println("Rollno:"+rollno);
+     System.out.println("Marks:"+marks);
+ }
+    public static void main(String[] args) {
+        Student s1 = new Student();
+        s1.name = "AjethaaNandhakumar";
+        s1.rollno = 24;
+        s1.marks = 90;
+        s1.display();
+    }
+}
+
+
+TASK-2
+class BankAccount {
+ int accountnumber;
+ String holdername;
+ double balance;
+ void display(){
+     System.out.println("AccountNumber :"+ accountnumber);
+     System.out.println("HolderName:"+ holdername);
+     System.out.println("Balance:"+ balance);
+ }
+    public static void main(String[] args) {
+        BankAccount b1 = new BankAccount();
+        b1.accountnumber = 8111056;
+        b1.holdername = "AjethaaNandhakumar";
+        b1.balance = 5000;
+        b1.display();
+    }
+}
+
+
+TASK-3
+ class Vehicle {
+    String brand;
+
+    void start() {
+        System.out.println(brand + " Vehicle Started");
+    }
+}
+
+class Car extends Vehicle {
+    String model;
+
+    void displayDetails() {
+        System.out.println("Brand: " + brand);
+        System.out.println("Model: " + model);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Car c = new Car();
+        c.brand = "Toyota";
+        c.model = "Innova";
+        c.displayDetails();
+    }
+}
+
+
+
+TASK4
+
+class Manager extends Employee {
+    String department;
+
+    void displayManager() {
+        display();
+        System.out.println("Department: " + department);
+    }
+}
+
+
+public class Main {
+    public static void main(String[] args) {
+        Developer dev = new Developer();
+        dev.name = "Arjun";
+        dev.salary = 75000;
+        dev.programmingLanguage = "Java";
+        dev.displayDeveloper();
+
+        System.out.println();
+
+        Manager mgr = new Manager();
+        mgr.name = "Meera";
+        mgr.salary = 95000;
+        mgr.department = "Finance";
+        mgr.displayManager();
+    }
+}
+
+TASK-5
+class Animal {
+    String name;
+
+    void eat() {
+        System.out.println(name + " is eating.");
+    }
+}
+
+
+class Mammal extends Animal {
+    void walk() {
+        System.out.println(name + " is walking.");
+    }
+}
+
+
+class Dog extends Mammal {
+    void bark() {
+        System.out.println(name + " is barking.");
+    }
+}
+
+
+public class Main {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.name = "Bruno";
+        d.eat();   
+        d.walk();  
+        d.bark();  
+    }
+}
+
+
+TASK-6
+class Shape {
+    void area() {
+        System.out.println("Calculating area...");
+    }
+}
+
+
+class Circle extends Shape {
+    double radius;
+
+    Circle(double r) {
+        radius = r;
+    }
+
+    @Override
+    void area() {
+        double result = Math.PI * radius * radius;
+        System.out.println("Area of Circle: " + result);
+    }
+}
+
+
+class Rectangle extends Shape {
+    double length, width;
+
+    Rectangle(double l, double w) {
+        length = l;
+        width = w;
+    }
+
+    @Override
+    void area() {
+        double result = length * width;
+        System.out.println("Area of Rectangle: " + result);
+    }
+}
+
+
+public class Main {
+    public static void main(String[] args) {
+        Circle c = new Circle(5.0);
+        Rectangle r = new Rectangle(4.0, 6.0);
+
+        c.area(); 
+        r.area();
+    }
+}
+
+
+TASK-7
+
+class Person {
+    Person() {
+        System.out.println("Person Created");
+    }
+}
+
+
+class Student extends Person {
+    Student() {
+        super(); 
+        System.out.println("Student Created");
+    }
+}
+
+
+public class Main {
+    public static void main(String[] args) {
+        Student s = new Student(); 
+    }
+}
